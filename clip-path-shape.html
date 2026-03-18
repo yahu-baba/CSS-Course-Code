@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Clip-path</title>
+    <style>
+      #box {
+        background: orangered;
+        width: 400px;
+        height: 400px;
+        clip-path: shape(
+          from 0% 0%,
+          line to 100% 0%,
+          line to 100% 80%,
+          arc to 50% 80% of 200px,
+          curve to 0% 80% with 25% 91%,
+          close
+        );
+        padding: 50px 20px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. In obcaecati
+      possimus doloremque cum, ad assumenda iste excepturi cumque doloribus est.
+    </div>
+  </body>
+</html>
+
+<!-- clip-path: shape(
+          from 0 0,
+          hline to 100%,
+          vline to 80%,
+          line to 50% 100%,
+          line to 0% 80%,
+          close
+        ); -->
+
+<!-- clip-path: shape(
+          from 0% 50%,
+          curve to 50% 0% with 50% 50%,
+          curve to 100% 50% with 75% 0%,
+          curve to 50% 100% with 85% 100%,
+          line to 0% 100%,
+          close
+        ); -->
+
+<!-- clip-path: shape(
+          from 0% 0%,
+          arc to 100% 0% of 600px,
+          line to 100% 70%,
+          arc to 0% 70% of 600px,
+          close
+        ); -->
