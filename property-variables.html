@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+  <head>
+    <title>@property</title>
+    <style>
+      /* :root {
+        --button-bg: green;
+      } */
+      /* @property --button-bg {
+        syntax: "<color>";
+        initial-value: green;
+        inherits: false;
+      }
+
+      button {
+        background: var(--button-bg);
+      }
+
+      button:nth-child(2) {
+        --button-bg: 25;
+        background: var(--button-bg);
+      } */
+
+      /* Example 2 */
+      /* :root {
+        --angle: 0deg;
+      } */
+      /* @property --angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+      }
+
+      #box {
+        width: 300px;
+        height: 300px;
+        background: tomato;
+        transform: rotate(var(--angle));
+        transition: --angle 2s;
+      }
+
+      #box:hover {
+        --angle: 360deg;
+      } */
+
+      /* Example 3 */
+      /* @property --hue {
+        syntax: "<number>";
+        initial-value: 0;
+        inherits: false;
+      }
+
+      #box {
+        width: 300px;
+        height: 300px;
+        background: hsl(var(--hue), 70%, 50%);
+        animation: colorChange 3s infinite linear;
+      }
+
+      @keyframes colorChange {
+        to {
+          --hue: 360;
+        }
+      } */
+
+      /* Example 4 */
+      /* @property --angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+      }
+
+      #box {
+        width: 300px;
+        height: 300px;
+        border: 15px solid;
+        border-image: linear-gradient(var(--angle), red, blue) 1;
+        animation: rotateBorder 3s infinite linear;
+      }
+
+      @keyframes rotateBorder {
+        to {
+          --angle: 360deg;
+        }
+      } */
+
+      /* Example 5 */
+      /* @property --size {
+        syntax: "<length>";
+        initial-value: 100px;
+        inherits: false;
+      }
+
+      #box {
+        width: var(--size);
+        height: 100px;
+        background: tomato;
+        transition: --size 1s;
+      }
+
+      #box:hover {
+        --size: 300px;
+      } */
+
+      /* Example 6 */
+      @property --progress {
+        syntax: "<percentage>";
+        initial-value: 0%;
+        inherits: false;
+      }
+
+      .loader {
+        width: 200px;
+        height: 20px;
+        background: lightgrey;
+        position: relative;
+      }
+
+      .loader::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: var(--progress);
+        background: green;
+        animation: load 3s infinite linear;
+      }
+
+      @keyframes load {
+        to{
+          --progress : 100%
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button>Click 1</button>
+    <button>Click 2</button>
+    <button>Click 3</button> -->
+
+    <!-- <div id="box"></div> -->
+
+    <div class="loader"></div>
+  </body>
+</html>
