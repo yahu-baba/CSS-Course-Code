@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If Function</title>
+    <style>
+      /* :root {
+        --color: black;
+      }
+
+      body {
+        background: grey;
+      } */
+
+      #box {
+        /* color: var(--color);
+        background-color: if(style(--color: white): black; else: white); */
+        width: 300px;
+        height: 300px;
+        padding: if(media(width >= 768px): 2rem; else: 1rem);
+        border: 1px solid #000;
+      }
+
+      /* body {
+        background-color: if(
+          supports(color: oklch(0.7 0.185 232)): oklch(0.7 0.185 232) ;
+            else: red;
+        );
+      }
+
+      body::after {
+        content: if(
+          supports(color: oklch(0.7 0.185 232)): "Your browser supports OKLCH" ;
+            else: "Your browser does not supports OKLCH" ;
+        );
+      } */
+
+      h1 {
+        font-size: if(
+          media(width >= 1200px): 3rem; media(width >= 768px): 2.5rem;
+            media(width >= 480px): 2rem; else: 1.75rem
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <h1>If() Function</h1>
+    <div id="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+      laudantium suscipit nihil tenetur neque libero fugiat cumque veniam totam
+      deserunt maiores iste asperiores sequi culpa ullam voluptate, aperiam,
+      incidunt maxime?
+    </div>
+  </body>
+</html>

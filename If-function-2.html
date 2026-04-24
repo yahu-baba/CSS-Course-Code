@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If Function</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: if(
+          media(width <= 767px): 1fr; media(width <= 1024px): repeat(2, 1fr) ;
+            else: repeat(4, 1fr) ;
+        );
+      }
+
+      .card {
+        --status: attr(data-status type(<custom-ident>));
+
+        background-color: if(
+          style(--status: pending): #dbf3fa; style(--status: complete): #e0ffe0;
+            else: #f1f1f1
+        );
+
+        border: 1px solid;
+        border-color: if(
+          style(--status: pending): royalblue;
+            style(--status: complete): seagreen; else: gray
+        );
+
+        /* width: 120px; */
+        min-height: 100px;
+        /* float: left; */
+        padding: 10px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>If() Function</h1>
+
+    <div class="container">
+      <div class="card" data-status="pending">Lorem ipsum dolor sit amet.</div>
+      <div class="card" data-status="complete">In sit dolores maxime esse.</div>
+      <div class="card" data-status="">
+        Laudantium voluptatibus possimus tempore dolor.
+      </div>
+      <div class="card" data-status="pending">
+        Culpa quis dolorum voluptatum at.
+      </div>
+      <div class="card" data-status="complete">
+        Officiis accusantium molestiae neque ipsum.
+      </div>
+      <div class="card" data-status="">
+        Accusantium facere officia quae labore.
+      </div>
+    </div>
+  </body>
+</html>
