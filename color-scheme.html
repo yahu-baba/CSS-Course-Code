@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color-Scheme</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+
+        --bg: light-dark(#ffffff, #1a1a2e);
+        --text: light-dark(#1a1a2e, #ffffff);
+        --card-bg: light-dark(#f3f4f6, #2d2d44);
+        --border: light-dark(#e5e7eb, #374151);
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        background: var(--card-bg);
+        width: 150px;
+        height: 200px;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      html:has(#dark-toggle:checked) {
+        color-scheme: dark;
+      }
+
+      html:not(:has(#dark-toggle:checked)) {
+        color-scheme: light;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Color-Scheme</h1>
+
+    <input type="checkbox" id="dark-toggle" />
+    <label for="dark-toggle">🌙 Dark Mode</label>
+
+    <div class="card">
+      <h3>Sub Heading</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, ducimus.
+      </p>
+    </div>
+
+    <input type="text" placeholder="Type here" />
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis
+      expedita rerum harum maiores esse non odit sunt, est nam impedit fuga
+      recusandae. Id rem sed quo sequi dignissimos ea, eos minus ex ad
+      doloremque voluptates alias laudantium asperiores itaque corrupti enim
+      aspernatur, quas esse eaque blanditiis perspiciatis consequatur? Quidem
+      fuga ex a sunt eum atque tempore praesentium consequatur eius placeat
+      voluptatibus soluta numquam animi reprehenderit itaque quos nemo pariatur
+      laudantium dolore, explicabo neque error quia? Explicabo fugit dolorum
+      nostrum nihil. Omnis, saepe dolorem sapiente, cum autem animi et,
+      distinctio laudantium at quaerat voluptatum voluptate alias modi soluta
+      accusamus aperiam ipsam labore molestiae fuga enim maiores. Aspernatur
+      deserunt architecto id a alias natus eum laboriosam reiciendis non
+      recusandae voluptatibus, sint accusantium, iure nulla cupiditate? Quidem
+      incidunt, pariatur rerum dignissimos architecto iure nam, sequi, fugit
+      voluptate sapiente laboriosam. Ipsam, dolores dolor odit quo nam et,
+      mollitia quidem ipsa vitae nihil labore expedita at, numquam delectus modi
+      tenetur. Repellendus, dicta voluptates dolores, dolore corrupti nostrum
+      illum in, illo nulla exercitationem reprehenderit itaque quas quasi ullam
+      hic quo aliquam suscipit et rerum esse quia? Velit tempore ea quam
+      suscipit dolore quibusdam aliquid reiciendis veniam ad quidem. Dolor
+      molestiae deleniti minus quae necessitatibus doloremque delectus a,
+      asperiores culpa mollitia numquam, ullam odio velit officia qui recusandae
+      quasi assumenda quod ut amet error optio cumque? Animi dignissimos esse
+      reiciendis dolorum nemo voluptatum voluptates debitis accusantium
+      accusamus aspernatur labore facere nisi dolorem reprehenderit, ratione
+      facilis magni harum ipsum consectetur. Reiciendis nisi voluptatibus
+      quisquam temporibus illum accusantium libero corporis vel impedit tempore,
+      asperiores eligendi quo tempora culpa pariatur tenetur doloribus aperiam
+      expedita quae amet exercitationem. Totam quod adipisci nam praesentium, ad
+      amet, maiores commodi vitae aliquid consectetur assumenda dicta quis sunt.
+      Nostrum, in cum. Nihil ratione delectus sed ab sequi. Vel molestiae
+      ratione a iusto illo laboriosam architecto aliquam. Enim, ullam in.
+      Debitis perferendis saepe unde eum suscipit! Minima, doloribus modi rem
+      cum veniam quibusdam optio cumque, itaque quam nisi libero. Ullam
+      excepturi expedita ad consectetur. Praesentium eveniet officiis animi
+      aspernatur doloremque neque voluptatum error nostrum obcaecati tempora.
+      Veniam quis minima, nostrum architecto vitae aliquid magnam totam numquam
+      tenetur maxime ex iste earum odit illum ipsam error saepe? Illo
+      necessitatibus voluptate vel nostrum commodi totam doloremque
+      consequuntur, beatae, ut enim tempora corrupti itaque est consequatur.
+      Iure possimus consequatur eos reiciendis enim ipsum, laudantium pariatur
+      ad, accusantium magnam fugiat iste autem nemo veritatis at facilis
+      distinctio modi est hic iusto, non repellendus. Vel doloremque, libero
+      minima ex eaque accusamus reprehenderit quas tempora? Libero deserunt
+      maiores, dolorem voluptas expedita quas culpa eius cumque est aliquam
+      totam illum ipsam placeat vero perferendis, ea quis hic optio laboriosam
+      consequatur aperiam incidunt maxime dicta minus? Ipsa cupiditate quo rem
+      ullam? Delectus, dolorum dolor! Quis voluptatem doloremque ut! Nulla quo
+      veritatis porro! Deleniti est enim quam. Esse aperiam commodi eligendi
+      exercitationem vitae expedita minus dolor officia! Adipisci animi
+      asperiores maxime facere fuga eveniet! Numquam vel, nam soluta accusamus
+      doloribus placeat, reprehenderit molestiae quae exercitationem iste
+      laudantium non. Ut dolorem cum necessitatibus consequuntur corporis
+      aliquam?
+    </p>
+  </body>
+</html>
