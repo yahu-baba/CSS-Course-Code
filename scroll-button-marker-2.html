@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Scroll-Snap</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+      #container-wrapper {
+        width: 800px;
+        margin: 0 auto;
+      }
+      #container {
+        /* border: 3px solid #6518d0; */
+        height: 300px;
+        overflow-x: hidden;
+        display: flex;
+        gap: 15px;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scroll-marker-group: after;
+      }
+      div.section {
+        border-bottom: 1px solid white;
+        text-align: center;
+        position: relative;
+        padding: 1rem;
+        flex: 0 0 300px;
+        align-items: center;
+        scroll-snap-align: center;
+      }
+      div.section:nth-of-type(1),
+      div.section:nth-of-type(6) {
+        background: #00b894;
+      }
+      div.section:nth-of-type(2) {
+        background: #0984e3;
+      }
+      div.section:nth-of-type(3) {
+        background: #d63031;
+      }
+      div.section:nth-of-type(4) {
+        background: #e67e22;
+      }
+      div.section:nth-of-type(5) {
+        background: #9b59b6;
+      }
+      h1 {
+        text-align: center;
+        color: white;
+        font-size: 30px;
+      }
+
+      /* Navigation arrows */
+      #container::scroll-button(left) {
+        content: "◀" / "Scroll Left";
+        float: left;
+        translate: -10px;
+      }
+
+      #container::scroll-button(right) {
+        content: "▶" / "Scroll Right";
+        float: right;
+        translate: 10px;
+      }
+
+      #container::scroll-button(left),
+      #container::scroll-button(right) {
+        width: 30px;
+        height: 30px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.2);
+        border: 0;
+        font-size: 20px;
+        cursor: pointer;
+        transform: translateY(-160px);
+      }
+
+      /* Dot indicators */
+      #container::scroll-marker-group {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        margin-top: 12px;
+        /* border: 1px solid #000; */
+        /* position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%); */
+      }
+
+      .section::scroll-marker {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #3c75d5;
+      }
+
+      .section::scroll-marker:target-current {
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container-wrapper">
+      <div id="container">
+        <div class="section">
+          <h1>Section One</h1>
+        </div>
+        <div class="section">
+          <h1>Section Two</h1>
+        </div>
+        <div class="section">
+          <h1>Section Three</h1>
+        </div>
+        <div class="section">
+          <h1>Section Four</h1>
+        </div>
+        <div class="section">
+          <h1>Section Five</h1>
+        </div>
+        <div class="section">
+          <h1>Section Six</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
