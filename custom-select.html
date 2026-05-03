@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Select Box</title>
+    <style>
+      select,
+      ::picker(select) {
+        appearance: base-select;
+      }
+
+      option {
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        transition: all 0.5s;
+      }
+
+      option::checkmark {
+        display: none;
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      option:checked {
+        color: maroon;
+        background: pink;
+        font-weight: bold;
+      }
+
+      option:hover {
+        background: lightgreen;
+      }
+
+      /* option:nth-of-type(odd) {
+        background: lightgoldenrodyellow;
+      } */
+
+      ::picker(select) {
+        border: 3px solid tomato;
+        background: lightgoldenrodyellow;
+        border-radius: 10px;
+        box-shadow: 2px 2px 3px grey;
+        left: 20px;
+        top: 5px;
+        padding: 15px;
+      }
+
+      select:open::picker(select) {
+        width: 600px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 5px;
+      }
+
+      select::picker-icon {
+        display: none;
+        color: white;
+        transition: rotate 0.4s;
+      }
+
+      select:open::picker-icon {
+        rotate: 180deg;
+      }
+
+      select {
+        color: #fff;
+        background: tomato;
+        border: 0;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        padding: 7px 20px;
+      }
+
+      selectedcontent {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      selectedcontent img {
+        background: #fff;
+        padding: 1px;
+        border-radius: 2px;
+      }
+
+      selectedcontent p {
+        display: none;
+      }
+
+      select h3 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: normal;
+      }
+
+      select p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Custom Select Box</h1>
+    <select name="">
+      <button>
+        <selectedcontent></selectedcontent>
+        <span class="arrow">
+          <img src="images/down-arrow.png" alt="" />
+        </span>
+      </button>
+      <option value="">
+        <img src="images/india.png" alt="" />
+        <div class="text">
+          <h3>India</h3>
+          <p>Lorem ipsum dolor sit.</p>
+        </div>
+      </option>
+      <option value="">
+        <img src="images/pakistan.png" alt="" />
+        <div class="text">
+          <h3>Pakistan</h3>
+          <p>Lorem ipsum dolor sit.</p>
+        </div>
+      </option>
+      <option value="">
+        <img src="images/bangladesh.png" alt="" />
+
+        <div class="text">
+          <h3>Bangladesh</h3>
+          <p>Lorem ipsum dolor sit.</p>
+        </div>
+      </option>
+      <option value="">
+        <img src="images/nepal.png" alt="" />
+        <div class="text">
+          <h3>Nepal</h3>
+          <p>Lorem ipsum dolor sit.</p>
+        </div>
+      </option>
+      <option value="">
+        <img src="images/srilanka.png" alt="" />
+        <div class="text">
+          <h3>SriLanka</h3>
+          <p>Lorem ipsum dolor sit.</p>
+        </div>
+      </option>
+    </select>
+  </body>
+</html>
