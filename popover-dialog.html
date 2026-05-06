@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popover Dialog</title>
+    <style>
+      #myPopover {
+        padding: 20px;
+        border: 0;
+        border-radius: 10px;
+        background: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Popover</h1>
+
+    <button popovertarget="myPopover" popovertargetaction="show">
+      Open Popover
+    </button>
+
+    <div id="myPopover" popover>
+      <p>hello! I am a Popover</p>
+      <button popovertarget="myPopover" popovertargetaction="hide">
+        Close
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popover Tooltip</title>
+    <style>
+      button {
+        margin: 100px;
+      }
+
+      #tooltip {
+        width: 200px;
+        background: lightgreen;
+        border: 0;
+        border-radius: 25px;
+        padding: 15px;
+        margin-top: 20px;
+        position-area: bottom;
+        position: relative;
+        overflow: visible;
+      }
+
+      #tooltip::before {
+        content: "";
+        height: 15px;
+        aspect-ratio: 2;
+        background: lightgreen;
+        position: absolute;
+        left: 50%;
+        top: -14px;
+        translate: -50%;
+        clip-path: polygon(50% 0, 100% 100%, 0 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Popover Tooltip</h1>
+
+    <button interestfor="tooltip">Mouse Hover</button>
+
+    <div id="tooltip" popover>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
+      repellendus.
+    </div>
+  </body>
+</html>

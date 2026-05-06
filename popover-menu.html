@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popover Menu</title>
+    <style>
+      button {
+        margin: 200px;
+        padding: 30px 50px;
+      }
+
+      #menu {
+        background: lightgreen;
+        width: 200px;
+        margin: 5px 0 0;
+        padding: 15px;
+        position-area: bottom span-right;
+      }
+
+      #menu ul {
+        margin: 0;
+        padding: 0;
+        list-style-position: inside;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Popover Menu</h1>
+
+    <button popovertarget="menu">Open Menu</button>
+
+    <div id="menu" popover>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Products</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
