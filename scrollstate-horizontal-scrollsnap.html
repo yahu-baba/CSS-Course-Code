@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizontal Scrollsnap</title>
+    <style>
+      .tabs {
+        width: 500px;
+        display: flex;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+      }
+
+      .tab {
+        background: pink;
+        min-width: 100%;
+        padding: 100px;
+        scroll-snap-align: start;
+        container-type: scroll-state;
+      }
+
+      @container scroll-state(snapped:inline) {
+        .tab span {
+          border: 5px solid red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabs">
+      <div class="tab"><span>Tab One</span></div>
+      <div class="tab"><span>Tab Two</span></div>
+      <div class="tab"><span>Tab Three</span></div>
+    </div>
+  </body>
+</html>
