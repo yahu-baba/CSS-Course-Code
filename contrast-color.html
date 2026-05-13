@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contrast-Color</title>
+    <style>
+      :root {
+        --bg: #033e16;
+        --bg-hover: #a5e1b8;
+      }
+
+      button {
+        color: contrast-color(var(--bg));
+        background: var(--bg);
+        font-size: 30px;
+        padding: 15px 25px;
+        border: 0;
+        border-radius: 10px;
+        transition: all 0.3s;
+      }
+
+      button:hover {
+        background: var(--bg-hover);
+        color: contrast-color(var(--bg-hover));
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Contrast-Color()</h1>
+
+    <button>Click</button>
+  </body>
+</html>
