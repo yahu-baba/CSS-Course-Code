@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Field-Sizing</title>
+    <style>
+      div {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      label {
+        min-width: 120px;
+        text-align: right;
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        field-sizing: content;
+        min-width: 150px;
+      }
+
+      textarea {
+        resize: none;
+        field-sizing: content;
+        max-width: 250px;
+      }
+
+      select {
+        field-sizing: content;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Field-Sizing</h1>
+    <div>
+      <label for="name">Enter name:</label>
+      <input type="text" id="name" maxlength="50" />
+    </div>
+    <div>
+      <label for="email">Enter email:</label>
+      <input
+        type="email"
+        id="email"
+        maxlength="50"
+        placeholder="e.g. a@b.com"
+      />
+    </div>
+    <div>
+      <label for="comment">Enter comment:</label>
+      <textarea id="comment">This is a comment.</textarea>
+    </div>
+    <div>
+      <label for="country">Select country:</label>
+      <select id="country" size="3" multiple>
+        <option>India</option>
+        <option>Pakistan</option>
+        <option>Bangladesh</option>
+        <option>Srilanka</option>
+        <option>Nepal</option>
+        <option>India</option>
+        <option>Pakistan</option>
+        <option>Bangladesh</option>
+        <option>Srilanka</option>
+        <option>Nepal</option>
+      </select>
+    </div>
+  </body>
+</html>
