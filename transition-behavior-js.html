@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition-Behavior</title>
+    <style>
+      div {
+        transition:
+          opacity 1s,
+          display 1s;
+        transition-behavior: allow-discrete;
+      }
+
+      .hidden {
+        opacity: 0;
+        display: none;
+      }
+
+      .message {
+        --c: #ff9600;
+        border: 2px solid var(--c);
+        background-color: oklch(from var(--c) l c h / 0.4);
+        padding: 0.5rem;
+        position: relative;
+      }
+
+      button {
+        position: absolute;
+        inset: 0.5rem 0.5rem auto auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="message">
+      Here is a message box
+
+      <button id="closeButton">close</button>
+    </div>
+
+    <script>
+      document.querySelector("#closeButton").addEventListener("click", (e) => {
+        document.querySelector("div").classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
